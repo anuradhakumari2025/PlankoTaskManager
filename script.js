@@ -78,23 +78,25 @@ columns.forEach((col) => {
       col.appendChild(draggedTask);
       col.style.backgroundColor = "";
 
-      // Update status text inside the task
-      let statusText = col.closest(".todo")?.querySelector("h1").textContent;
+       // Get status from data attribute
+      const statusValue = col.getAttribute("data-status");
+
+      // Update status text inside the task card
       draggedTask.querySelector(
         "p:last-of-type"
-      ).innerHTML = `<span>Status: </span>${statusText}`;
+      ).innerHTML = `<span>Status: </span>${statusValue}`;
 
       // --- Update status in taskList and localStorage ---
       // Find the task in taskList by id
       const taskId = draggedTask.id;
-      const statusValue =
-        statusText === "Todo"
-          ? "todo"
-          : statusText === "In Progress"
-          ? "in-progress"
-          : statusText === "Done"
-          ? "done"
-          : "";
+      // const statusValue =
+      //   statusText === "Todo"
+      //     ? "todo"
+      //     : statusText === "In Progress"
+      //     ? "in-progress"
+      //     : statusText === "Done"
+      //     ? "done"
+      //     : "";
 
       const index = taskList.findIndex((t) => t.id === taskId);
       if (index !== -1 && statusValue) {
