@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  padding: 1rem 3rem;
+  background-color: #edeffd;
+}
+// nav {
+//   width: 100%;
+//   display: flex;
+//   padding: 1rem 0;
+//   height: 12vh;
+//   border: 1px solid black;
+//   justify-content: space-between;
+//   align-items: center;
+//   .logo {
+//     width: 20%;
+//     font-weight: 600;
+//     font-size: 2rem;
+//     font-style: italic;
+//   }
+//   .title {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     width: 80%;
+//     align-items: center;
+//     .profile {
+//       display: flex;
+//       gap: 0.5rem;
+//       .name {
+//         border: 1px solid gray;
+//         padding: 0.6rem 1rem;
+//         border-radius: 10px;
+//       }
+//       .profileIcon {
+//         border-radius: 50%;
+//         padding: 1rem;
+//         background-color: rgb(207, 204, 204);
+//       }
+//     }
+//   }
+// }
+.view1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  // max-height: 88vh;
+  height: 100%;
+  gap: 1rem;
+
+  aside {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    // border: 1px solid black;
+    padding-bottom: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 7px 8px #6666b3;
+    overflow: auto;
+    #logo {
+      // font-family: sev;
+      font-family: "Orbitron", sans-serif;
+      font-optical-sizing: auto;
+      padding: 0.8rem 1rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #6666b3;
+      // font-style: normal;
+    }
+    p {
+      margin: 0;
+      padding: 0.8rem 1rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+      span {
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    p:hover {
+      cursor: pointer;
+      background-color: rgba(12, 16, 214, 0.521);
+    }
+    // .filter {
+    //   // display: flex;
+    //   display: none;
+    //   flex-direction: column;
+    //   gap: 0.5rem;
+    //   select,input {
+    //     border: none;
+    //     padding: 0.6rem 1rem;
+    //     font-size: 1.2rem;
+    //     font-weight: 400;
+    //     margin: 0 0.8rem;
+    //   }
+    // }
+
+    .filter-panel {
+      // display: flex;
+      display: none;
+      flex-wrap: wrap;
+
+      gap: 1rem;
+      background-color: white;
+      // background-color: red;
+      padding: 1rem;
+      padding-top: 0;
+      color: black;
+
+      .custom-dropdown {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.3rem;
+
+        label {
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #575757;
+        }
+
+        select,
+        input[type="date"] {
+          background-color: white;
+          color: black;
+          // border: 1px solid #444;
+          padding: 0.5rem 0.75rem;
+          border-radius: 6px;
+          font-size: 1rem;
+          // appearance: none;
+
+          &:focus {
+            outline: none;
+            border-color: #0078d4;
+            box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.3);
+          }
+        }
+      }
+    }
+  }
+  main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 1px 5px 5px #6666b3c0;
+      padding: 1rem 2rem;
+      .profile{
+        .name{
+          background-color: #5454e4d7;
+          // opacity: 0.5;
+          padding: 0.4rem 0.8rem;
+          border-radius: 10px;
+          margin-right: 0.6rem;
+          color: white;
+        }
+        .profileIcon{
+          border-radius: 50%;
+          border: 1px solid;
+                    border-color: #5a5adbb4;
+padding: 0.3rem;
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      gap: 1rem;
+      .todo {
+        min-width: 32%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 1px 7px 8px #6666b3;
+        // border: 1px solid black;
+        .todoTasks,
+        .taskInProgress,
+        .taskDone {
+          padding: 0.5rem 0.5rem;
+          display: flex;
+          flex-direction: column;
+          overflow-y: scroll;
+          gap: 1rem;
+          margin-top: 1rem;
+          .todoTask {
+            border-radius: 10px;
+            padding: 0.8rem 0.8rem;
+            background-color: rgb(240, 244, 248);
+            border-left: 5px solid rgb(255, 174, 0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+            p {
+              color: gray;
+              padding-bottom: 0.3rem;
+              span {
+                font-weight: 600;
+                color: black;
+              }
+            }
+            h4 {
+              font-size: 1.3rem;
+              font-weight: 600;
+              text-align: center;
+              padding-bottom: 0.5rem;
+            }
+          }
+        }
+
+        .taskInProgress {
+          .todoTask {
+            border-left: 5px solid rgb(0, 217, 255);
+          }
+        }
+        .taskDone {
+          .todoTask {
+            border-left: 5px solid rgb(5, 207, 22);
+          }
+        }
+
+        h2 {
+          font-weight: 500;
+          font-size: 1.5rem;
+          padding: 0.8rem 1.8rem;
+        }
+        .addTaskBtn {
+          padding: 0.8rem 1rem;
+          margin: 0.8rem 1rem;
+          margin-top: auto;
+          font-size: 1rem;
+          font-weight: 500;
+          border-radius: 10px;
+          color: white;
+          border: none;
+          background-color: rgba(12, 16, 214, 0.721);
+          span {
+            padding: 0.8rem;
+          }
+        }
+        .editBtn {
+          color: rgb(34, 184, 21);
+          border: none;
+          font-size: 1.5rem;
+          padding: 0.5rem;
+          margin-top: 0.5rem;
+          border-radius: 50%;
+        }
+        .editBtn:hover{
+          border-radius: 50%;
+          background-color: #d8dcfc;
+        }
+        button:hover {
+          cursor: pointer;
+          background-color: rgba(12, 15, 214, 0.829);
+          scale: 1.02;
+          transition: all 0.3s ease-in-out;
+        }
+        button:active {
+          scale: 0.9;
+        }
+      }
+    }
+
+    .addTaskPopup {
+      position: absolute;
+      background-color: rgba(179, 56, 56, 0.9);
+      width: 100%;
+      height: auto;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      form {
+        width: 60%;
+        // border: palevioletred solid 1px;
+        padding: 2rem;
+        .head {
+          display: flex;
+          justify-content: space-between;
+          // background-color: red;
+        }
+        input,
+        textarea,
+        select {
+          width: 100%;
+          padding: 0.5rem 1rem;
+        }
+        button {
+          padding: 0.5rem 1rem;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}
