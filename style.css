@@ -231,7 +231,6 @@ body {
   display: none;
   top: 0;
   justify-content: center;
-  display: flex;
 }
 .view1 main .addTaskPopup form {
   width: 55%;
