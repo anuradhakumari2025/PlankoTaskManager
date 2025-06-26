@@ -153,7 +153,7 @@ function createTaskCard(taskObj) {
     isEdit = true;
     taskBeingEdited = task;
 
-    form.title.value = task.querySelector("h3").textContent;
+    form.title.value = task.querySelector("h4").textContent;
     form.date.value = task
       .querySelector("p:nth-of-type(1)")
       .textContent.replace("Due Date:", "");
@@ -221,7 +221,7 @@ form.addEventListener("submit", (e) => {
     taskObj.id = taskBeingEdited.id;
 
     // UPDATE existing task
-    taskBeingEdited.querySelector("h3").textContent = title;
+    taskBeingEdited.querySelector("h4").textContent = title;
     taskBeingEdited.querySelector(
       "p:nth-of-type(1)"
     ).innerHTML = `<span>Due Date: </span>${date}`;
@@ -271,7 +271,7 @@ form.addEventListener("submit", (e) => {
     taskList.push(taskObj); // Add new task
   }
 
-  console.log(taskList, "Tasklist");
+  // console.log(taskList, "Tasklist");
 
   localStorage.setItem("tasks", JSON.stringify(taskList));
   renderTasks(taskList);
