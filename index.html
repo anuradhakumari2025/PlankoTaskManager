@@ -42,7 +42,7 @@
         <p class="filterIcon">
           <span><i class="ri-filter-3-line"></i></span>Filter
         </p>
-      
+
         <div class="filter-panel filter">
           <div class="custom-dropdown">
             <label>Status</label>
@@ -103,50 +103,45 @@
             <div class="taskDone" data-status="done"></div>
           </div>
 
-
- <!-- Form for edit and add task -->
-        <div class="addTaskPopup">
-          <form>
-            
+          <!-- Form for edit and add task -->
+          <div class="addTaskPopup">
+            <form>
               <div class="close"><i class="ri-close-large-line"></i></div>
-           
-            <p>Add Title</p>
-            <input type="text" placeholder="Title" name="title" required />
-            <p>Due Date</p>
-            <input type="date" name="date" />
-            <p>Task Description</p>
-            <textarea
-              name="desc"
-              id=""
-              placeholder="Task Description"
-              rows="6"
-            ></textarea>
-            <p>Assignee</p>
-            <select name="formAssignee" id="formAssignee" multiple></select>
-            <p>Priority</p>
-            <select name="priority" id="">
-              <option value="">Select Priority</option>
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select>
-            <p>Status</p>
-            <select name="status" id="">
-              <option value="">Select Status</option>
-              <option value="todo">Todo</option>
-              <option value="in-progress">In Progress</option>
-              <option value="done">Done</option>
-            </select>
-           <div class="btns">
-             <button type="submit" class="addBtn">Add Task</button>
-            <button class="cancel" type="button">Cancel</button>
-           </div>
-          </form>
+              <p>Add Title</p>
+              <input type="text" placeholder="Title" name="title" required />
+              <p>Due Date</p>
+              <input type="date" name="date" required/>
+              <p>Task Description</p>
+              <textarea
+                name="desc"
+                id=""
+                placeholder="Task Description"
+                rows="6"
+                required
+              ></textarea>
+              <p>Assignee</p>
+              <select name="formAssignee" id="formAssignee" multiple required></select>
+              <p>Priority</p>
+              <select name="priority" id="" required>
+                <option value="">Select Priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+              <p>Status</p>
+              <select name="status" id="" required>
+                <option value="">Select Status</option>
+                <option value="todo">Todo</option>
+                <option value="in-progress">In Progress</option>
+                <option value="done">Done</option>
+              </select>
+              <div class="btns">
+                <button type="submit" class="addBtn">Add Task</button>
+                <button class="cancel" type="button">Cancel</button>
+              </div>
+            </form>
+          </div>
         </div>
-
-        </div>
-
-       
       </main>
     </div>
     <script src="script.js"></script>
