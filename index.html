@@ -102,15 +102,14 @@
             <hr />
             <div class="taskDone" data-status="done"></div>
           </div>
-        </div>
 
-        <!-- Form for edit and add task -->
+
+ <!-- Form for edit and add task -->
         <div class="addTaskPopup">
-          <form action="">
-            <div class="head">
-              <h2>Task Title</h2>
+          <form>
+            
               <div class="close"><i class="ri-close-large-line"></i></div>
-            </div>
+           
             <p>Add Title</p>
             <input type="text" placeholder="Title" name="title" required />
             <p>Due Date</p>
@@ -138,10 +137,16 @@
               <option value="in-progress">In Progress</option>
               <option value="done">Done</option>
             </select>
-            <button type="submit">Add Task</button>
+           <div class="btns">
+             <button type="submit" class="addBtn">Add Task</button>
             <button class="cancel" type="button">Cancel</button>
+           </div>
           </form>
         </div>
+
+        </div>
+
+       
       </main>
     </div>
     <script src="script.js"></script>
