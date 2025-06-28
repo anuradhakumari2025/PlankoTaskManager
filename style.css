@@ -303,4 +303,16 @@ body {
 }
 .view1 main .addTaskPopup form button:active {
   scale: 0.9;
+}
+
+@media (max-width: 1020px) {
+  .bottom {
+    flex-direction: column;
+  }
+  .bottom .addTaskPopup {
+    justify-content: flex-start;
+  }
+  .bottom .addTaskPopup form {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

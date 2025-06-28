@@ -318,3 +318,15 @@ body {
     }
   }
 }
+@media (max-width: 1020px) {
+  .bottom {
+    flex-direction: column;
+    .addTaskPopup {
+      justify-content: flex-start;
+
+      form {
+        width: 100%;
+      }
+    }
+  }
+}
